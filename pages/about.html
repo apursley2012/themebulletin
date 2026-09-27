@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+  ThemeBulletin — pages/about.html
+  Author: Alysha Pursley
+  Purpose: explain the catalog using the same fixed-board visual language as the theme profiles.
+  Role: Maintains this page's editable document structure and content while shared CSS/JavaScript own reusable presentation and behavior.
+-->
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Alysha Pursley" name="author"/>
+  <meta content="Learn about Alysha Pursley's GitHub Pages theme collection." name="description"/>
+  <title>
+   About | ThemeBulletin
+  </title>
+  <!-- Shared styles load first; about.css owns only this page's board placement. -->
+  <link href="../assets/css/shared.css" rel="stylesheet"/>
+  <link href="../assets/css/about.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- Shared site header and primary navigation. -->
+  <header class="site-header">
+   <div class="site-header__inner">
+    <a aria-label="ThemeBulletin home" class="site-brand" href="../index.html">
+     <span aria-hidden="true" class="site-brand__mark">
+      ●
+     </span>
+     <span>
+      <strong>
+       ThemeBulletin
+      </strong>
+      <small>
+       GitHub Pages Theme Gallery
+      </small>
+     </span>
+    </a>
+    <nav aria-label="Primary navigation" class="site-nav">
+     <a href="../index.html">
+      Theme Boards
+     </a>
+     <a href="../pages/about.html">
+      About
+     </a>
+     <a href="https://github.com/apursley2012" rel="noopener noreferrer" target="_blank">
+      GitHub
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- About copy stays directly editable in HTML; JavaScript only scales the fixed board. -->
+  <main id="main-content">
+   <header class="hero detail-heading">
+    <p class="eyebrow">
+     About the collection
+    </p>
+    <h1>
+     ThemeBulletin
+    </h1>
+    <p>
+     A curated gallery of standalone portfolio designs, each with its own live demo and GitHub repository.
+    </p>
+   </header>
+   <div class="pinboard-viewport static-board-viewport">
+    <article class="pinboard about-pinboard">
+     <a class="board-back-note" href="../index.html">
+      ← Back to Theme Boards
+     </a>
+     <section class="about-title-note">
+      <p>
+       About the gallery
+      </p>
+      <h2>
+       One Collection.
+       <br/>
+       Many Personalities.
+      </h2>
+     </section>
+     <section class="board-paper about-paper-one">
+      <p class="paper-kicker">
+       The collection
+      </p>
+      <h2>
+       Built to Make Theme Browsing Easy
+      </h2>
+      <p>
+       This gallery brings my standalone GitHub Pages portfolio themes into one organized place. Every theme keeps its own visual identity, live demo, source repository, and individual profile page.
+      </p>
+     </section>
+     <section class="board-paper about-paper-two">
+      <p class="paper-kicker">
+       How to use it
+      </p>
+      <h2>
+       Browse, Compare, and Explore
+      </h2>
+      <ul>
+       <li>
+        Open a category board to compare related designs.
+       </li>
+       <li>
+        Select either the Polaroid or sticky note to open a theme page.
+       </li>
+       <li>
+        Use each profile page to launch the live demo or inspect the repository.
+       </li>
+      </ul>
+     </section>
+     <section class="board-paper about-paper-three">
+      <p class="paper-kicker">
+       Created by
+      </p>
+      <h2>
+       Alysha Pursley
+      </h2>
+      <p>
+       I designed this collection as a professional showcase for a wide range of static portfolio concepts, from developer workspaces and retro interfaces to cosmic, colorful, and mystical themes.
+      </p>
+      <a class="paper-button" href="../index.html">
+       Browse the Theme Boards
+      </a>
+     </section>
+    </article>
+   </div>
+  </main>
+  <!-- Shared site footer. -->
+  <footer class="site-footer">
+   <div class="site-footer__inner">
+    <div>
+     <strong>
+      ThemeBulletin
+     </strong>
+     <p>
+      A curated collection of standalone portfolio designs built for GitHub Pages.
+     </p>
+    </div>
+    <nav aria-label="Footer navigation">
+     <a href="../index.html">
+      Browse Themes
+     </a>
+     <a href="../pages/about.html">
+      About the Gallery
+     </a>
+     <a href="https://github.com/apursley2012" rel="noopener noreferrer" target="_blank">
+      Alysha on GitHub
+     </a>
+    </nav>
+    <p class="site-footer__copyright">
+     © 2026 Alysha Pursley.
+    </p>
+   </div>
+  </footer>
+  <!-- The shared fitting utility loads before the static-board adapter that consumes it. -->
+  <script src="../assets/js/board-fit.js">
+  </script>
+  <script src="../assets/js/static-board-fit.js">
+  </script>
+ </body>
+</html>
+
