@@ -1,0 +1,17 @@
+# ThemeBulletin editor configuration
+# Author: Alysha Pursley
+# Purpose: Defines repository-wide text formatting defaults so project-owned source stays consistent across editors.
+# Role: Provides safe editor-level whitespace, encoding, and indentation conventions without imposing editor-specific behavior on the static source.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
