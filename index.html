@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+  ThemeBulletin — index.html
+  Author: Alysha Pursley
+  Purpose: interactive ThemeBulletin catalog; theme cards are rendered from data/themes.js.
+  Role: Maintains this page's editable document structure and content while shared CSS/JavaScript own reusable presentation and behavior.
+-->
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Alysha Pursley" name="author"/>
+  <meta content="Browse a curated collection of distinctive GitHub Pages portfolio themes by Alysha Pursley." name="description"/>
+  <title>
+   ThemeBulletin | GitHub Pages Theme Gallery
+  </title>
+  <!-- Shared styles load first so home-specific rules can override them intentionally. -->
+  <link href="./assets/css/shared.css" rel="stylesheet"/>
+  <link href="./assets/css/home.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- Shared site header and primary navigation. -->
+  <header class="site-header">
+   <div class="site-header__inner">
+    <a aria-label="ThemeBulletin home" class="site-brand" href="index.html">
+     <span aria-hidden="true" class="site-brand__mark">
+      ●
+     </span>
+     <span>
+      <strong>
+       ThemeBulletin
+      </strong>
+      <small>
+       GitHub Pages Theme Gallery
+      </small>
+     </span>
+    </a>
+    <nav aria-label="Primary navigation" class="site-nav">
+     <a href="index.html">
+      Theme Boards
+     </a>
+     <a href="pages/about.html">
+      About
+     </a>
+     <a href="https://github.com/apursley2012" rel="noopener noreferrer" target="_blank">
+      GitHub
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- Dynamic board shell: JavaScript fills category navigation, cards, and pagination status. -->
+  <main id="main-content">
+   <header class="hero">
+    <h1>
+     ThemeBulletin
+    </h1>
+    <h2>
+     A GitHub Pages Theme Collection
+    </h2>
+    <p>
+     Find a Portfolio Theme That Feels Like You.
+    </p>
+    <p>
+     Browse distinctive portfolio themes, preview every design, and open each theme’s live demo and source
+        repository.
+    </p>
+   </header>
+   <nav aria-label="Theme categories" class="category-navigation" id="category-navigation">
+   </nav>
+   <div class="pinboard-viewport" id="pinboard-viewport">
+    <div class="pinboard" id="pinboard">
+    </div>
+   </div>
+   <nav aria-label="Bulletin board pages" class="board-pagination" id="board-pagination">
+    <button id="previous-board" type="button">
+     ← Previous Board
+    </button>
+    <span aria-live="polite" id="board-status">
+    </span>
+    <button id="next-board" type="button">
+     Next Board →
+    </button>
+   </nav>
+  </main>
+  <!-- Shared site footer. -->
+  <footer class="site-footer">
+   <div class="site-footer__inner">
+    <div>
+     <strong>
+      ThemeBulletin
+     </strong>
+     <p>
+      A curated collection of standalone portfolio designs built for GitHub Pages.
+     </p>
+    </div>
+    <nav aria-label="Footer navigation">
+     <a href="index.html">
+      Browse Themes
+     </a>
+     <a href="pages/about.html">
+      About the Gallery
+     </a>
+     <a href="https://github.com/apursley2012" rel="noopener noreferrer" target="_blank">
+      Alysha on GitHub
+     </a>
+    </nav>
+    <p class="site-footer__copyright">
+     © 2026 Alysha Pursley.
+    </p>
+   </div>
+  </footer>
+  <!-- Load order matters: catalog data, shared board scaling, then the home renderer. -->
+  <script src="./data/themes.js">
+  </script>
+  <script src="./assets/js/board-fit.js">
+  </script>
+  <script src="./assets/js/bulletin-board.js">
+  </script>
+ </body>
+</html>
