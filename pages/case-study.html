@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<!--
+  +----------------------------------------------------------------------------+
+  | ThemeBulletin                                                              |
+  | Purpose: Presents the project case study, design decisions, and            |
+  | implementation context.                                                    |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- GitHub Pages cannot set custom response headers; enforce supported CSP directives in the document. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta
+      content="Explore the design process and implementation behind ThemeBulletin, a curated directory of 64 independent portfolio themes."
+      name="description"
+    />
+    <title>A Gallery Built for Discovery | ThemeBulletin</title>
+    <!-- Shared styles load before the page-specific editorial stylesheet. -->
+    <link href="../assets/css/shared.css" rel="stylesheet" />
+    <link href="../assets/css/editorial.css" rel="stylesheet" />
+    <script defer src="../assets/js/mobile-navigation.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Shared site header and primary navigation. -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a
+          aria-label="ThemeBulletin home"
+          class="site-brand"
+          href="../index.html"
+        >
+          <img
+            alt="ThemeBulletin"
+            class="site-brand__logo"
+            height="375"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </button>
+        <nav
+          aria-label="Primary navigation"
+          class="site-nav"
+          id="primary-navigation"
+        >
+          <button
+            class="menu-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >Close <span aria-hidden="true">×</span></button>
+          <a href="../index.html">Theme Boards</a>
+          <a href="about.html">About</a>
+          <a aria-current="page" href="case-study.html">Case Study</a>
+          <a href="articles.html">Journal</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="credits.html">Credits</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >GitHub</a>
+        </nav>
+        <div class="menu-backdrop" aria-hidden="true"></div>
+      </div>
+    </header>
+    <!-- Page content is authored directly in HTML; fixed boards retain their native dimensions. -->
+    <main id="main-content">
+      <header class="hero detail-heading">
+        <p class="eyebrow">ThemeBulletin</p>
+        <h1>A Gallery Built for Discovery</h1>
+        <p>The thinking, structure, and tradeoffs behind ThemeBulletin.</p>
+      </header>
+      <section aria-labelledby="case-study-heading" class="editorial"><div class="editorial__intro">
+          <p class="eyebrow">Project case study · Design and implementation</p>
+          <h2 id="case-study-heading">A home for 64 distinct portfolio ideas</h2>
+          <p class="editorial__lead">A collection of standalone portfolio websites deserves more than a list of links. ThemeBulletin turns 64 independently published designs into a visual directory that helps visitors discover a direction, understand its character, and explore the original project.</p>
+          <div aria-label="Project at a glance" class="editorial__facts">
+            <div><strong>64</strong><span>Portfolio themes</span></div>
+            <div><strong>4</strong><span>Design categories</span></div>
+            <div><strong>Static</strong><span>GitHub Pages-ready</span></div>
+          </div>
+        </div><article class="editorial__article">
+          <p class="eyebrow">01 · The challenge</p>
+          <h3>Make variety feel navigable</h3>
+          <p>Every theme has its own visual identity, content structure, and published destination. That independence is part of the appeal, but it can make the collection difficult to browse: visitors need to open separate pages before they can see how the designs compare.</p>
+          <p>The challenge was to create a recognizable point of entry without making the individual projects feel interchangeable. ThemeBulletin needed to be a directory, not another theme layered over the work.</p>
+        </article><article class="editorial__article">
+          <p class="eyebrow">02 · The design response</p>
+          <h3>Use the bulletin board as a wayfinding system</h3>
+          <p>The corkboard gives the collection a playful, memorable visual language. Four categories—Retro Tech &amp; Arcade, Cosmic &amp; Celestial, Colorful &amp; Creative, and Magical &amp; Spooky—help visitors narrow their search by mood and style.</p>
+          <p>Category boards use pinned notes to present themes in a compact, browsable arrangement. A dedicated profile page then gives each design room for a larger preview, a short introduction, highlights, and clear links to its live demo and source repository.</p>
+          <p>Underneath the visual treatment, familiar links and buttons keep the journey straightforward: choose a category, select a theme, and decide whether to view the published project or inspect its code.</p>
+        </article><article class="editorial__article">
+          <p class="eyebrow">03 · How it works</p>
+          <h3>One catalog, independent destinations</h3>
+          <p>A central JavaScript dataset holds the information used by the gallery: theme titles, categories, summaries, preview assets, profile paths, and links to live demos and repositories. That shared source supports the category navigation and theme selection experience.</p>
+          <p>The site itself uses HTML, CSS, and lightweight JavaScript. It is designed to publish as a static website on GitHub Pages, without a database or application server. Each theme profile is also a directly accessible HTML page, so visitors can reach a specific design without navigating through the homepage first.</p>
+        </article><article class="editorial__article">
+          <p class="eyebrow">04 · Decisions and tradeoffs</p>
+          <h3>Keep the visual composition intact</h3>
+          <p>Each square board is arranged as a complete composition. On smaller screens, the board and its pinned contents scale together, preserving their relative placement and proportions. This keeps the design recognizable across devices, though smaller screens naturally reduce the size of the text inside the board.</p>
+          <p>Long-form pages such as this case study use responsive, reflowing text outside the corkboard. That distinction lets the visual directory keep its character without making extended reading depend on scaled-down text.</p>
+        </article><article class="editorial__article">
+          <p class="eyebrow">05 · The result</p>
+          <h3>Discovery without losing individuality</h3>
+          <p>ThemeBulletin brings the collection into one place while leaving each project free to stand on its own. Visitors can browse by creative direction, compare first impressions, and follow a consistent path from preview to live experience or source code.</p>
+          <p>The directory is an introduction, not a substitute for exploring the themes themselves. Screenshots communicate a visual direction; the published sites and repositories provide the fuller picture.</p>
+          <div class="editorial__actions"><a href="../index.html">Explore the theme boards</a><a href="articles.html">Read the design journal</a></div>
+        </article></section>
+    </main>
+    <!-- Shared site footer. -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <img
+            alt="ThemeBulletin"
+            class="site-footer__logo"
+            decoding="async"
+            height="375"
+            loading="lazy"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+          <p>A curated collection of standalone portfolio designs built for GitHub Pages.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="../index.html">Browse Themes</a>
+          <a href="../pages/about.html">About</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Alysha on GitHub</a>
+          <a href="../pages/case-study.html">Case Study</a>
+          <a href="../pages/articles.html">Journal</a>
+          <a href="../pages/privacy.html">Privacy</a>
+          <a href="../pages/terms.html">Terms</a>
+          <a href="../pages/accessibility.html">Accessibility</a>
+          <a href="../pages/credits.html">Credits</a>
+        </nav>
+        <p class="site-footer__copyright">© 2026 Alysha Pursley.</p>
+      </div>
+    </footer>
+    <script src="../assets/js/board-square.js"></script></body>
+</html>

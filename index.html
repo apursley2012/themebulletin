@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<!--
+  +----------------------------------------------------------------------------+
+  | ThemeBulletin                                                              |
+  | Purpose: Renders the main theme catalog and bulletin-board navigation.     |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- GitHub Pages cannot set custom response headers; enforce supported CSP directives in the document. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta
+      content="Browse a curated collection of distinctive GitHub Pages portfolio themes by Alysha Pursley."
+      name="description"
+    />
+    <title>ThemeBulletin | GitHub Pages Theme Gallery</title>
+    <!-- Shared styles load first so home-specific rules can override them intentionally. -->
+    <link href="./assets/css/shared.css" rel="stylesheet" />
+    <link href="./assets/css/home.css" rel="stylesheet" />
+    <script defer src="assets/js/mobile-navigation.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Shared site header and primary navigation. -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a
+          aria-current="page"
+          aria-label="ThemeBulletin home"
+          class="site-brand"
+          href="index.html"
+        >
+          <img
+            alt="ThemeBulletin"
+            class="site-brand__logo"
+            height="375"
+            src="assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </button>
+        <nav
+          aria-label="Primary navigation"
+          class="site-nav"
+          id="primary-navigation"
+        >
+          <button
+            class="menu-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >Close <span aria-hidden="true">×</span></button>
+          <a aria-current="page" href="index.html">Theme Boards</a>
+          <a href="pages/about.html">About</a>
+          <a href="pages/case-study.html">Case Study</a>
+          <a href="pages/articles.html">Journal</a>
+          <a href="pages/accessibility.html">Accessibility</a>
+          <a href="pages/privacy.html">Privacy</a>
+          <a href="pages/terms.html">Terms</a>
+          <a href="pages/credits.html">Credits</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >GitHub</a>
+        </nav>
+        <div class="menu-backdrop" aria-hidden="true"></div>
+      </div>
+    </header>
+    <!-- Dynamic board shell: JavaScript fills category navigation, cards, and pagination status. -->
+    <main id="main-content">
+      <header class="hero hero--logo">
+        <h1>
+          <img
+            alt="ThemeBulletin"
+            class="hero__logo"
+            height="375"
+            src="assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+        </h1>
+        <h2>A GitHub Pages Theme Collection</h2>
+        <p>Find a Portfolio Theme That Feels Like You.</p>
+        <p>
+          Browse distinctive portfolio themes, preview every design, and open each theme’s live demo and source
+          repository.
+        </p>
+      </header>
+      <nav
+        aria-label="Theme categories"
+        class="category-navigation"
+        id="category-navigation"
+      >
+      </nav>
+      <div
+        aria-label="Bulletin board; scales to fit the available width"
+        class="pinboard-viewport"
+        id="pinboard-viewport"
+        role="region"
+        tabindex="0"
+      >
+        <div class="pinboard" id="pinboard">
+        </div>
+      </div>
+      <!-- Optional readable links complement the uniformly scaled theme board on smaller screens. -->
+      <details
+        class="theme-list-alternative"
+        id="theme-list-alternative"
+        hidden
+      >
+        <summary>Browse these themes as a readable list</summary>
+        <ul id="theme-list-links"></ul>
+      </details>
+      <p
+        aria-atomic="true"
+        aria-live="polite"
+        class="visually-hidden"
+        id="board-announcement"
+        role="status"
+      ></p>
+      <nav
+        aria-label="Bulletin board pages"
+        class="board-pagination"
+        id="board-pagination"
+      >
+        <button id="previous-board" type="button">← Previous Board</button>
+        <span aria-live="polite" id="board-status">
+        </span>
+        <button id="next-board" type="button">Next Board →</button>
+      </nav>
+    </main>
+    <!-- Shared site footer. -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <img
+            alt="ThemeBulletin"
+            class="site-footer__logo"
+            decoding="async"
+            loading="lazy"
+            src="assets/images/theme-bulletin-logo.png"
+          />
+          <p>A curated collection of standalone portfolio designs built for GitHub Pages.</p>
+        </div>
+        <div>
+          <nav aria-label="Footer navigation">
+            <a href="index.html">Browse Themes</a>
+            <a href="pages/about.html">About</a>
+            <a
+              href="https://github.com/apursley2012"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Alysha on GitHub
+            </a>
+            <a href="pages/case-study.html">Case Study</a>
+            <a href="pages/articles.html">Journal</a>
+            <a href="pages/privacy.html">Privacy</a>
+            <a href="pages/terms.html">Terms</a>
+            <a href="pages/accessibility.html">Accessibility</a>
+            <a href="pages/credits.html">Credits</a>
+          </nav>
+        </div>
+        <div>
+          <p class="site-footer__copyright">© 2026 Alysha Pursley.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Load order matters: catalog data, shared board scaling, then the home renderer. -->
+    <script src="./data/themes.js"></script>
+    <script src="assets/js/board-square.js"></script>
+    <script src="./assets/js/bulletin-board.js"></script>
+  </body>
+</html>

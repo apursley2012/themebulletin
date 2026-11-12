@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<!--
+  +----------------------------------------------------------------------------+
+  | ThemeBulletin                                                              |
+  | Purpose: Introduces ThemeBulletin and its theme-gallery purpose.           |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- GitHub Pages cannot set custom response headers; enforce supported CSP directives in the document. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta
+      content="Explore the ThemeBulletin case study and design articles about a 64-theme GitHub Pages portfolio gallery."
+      name="description"
+    />
+    <title>About | ThemeBulletin</title>
+    <!-- Shared styles, then reusable editorial styles, then About-specific styles. -->
+    <link href="../assets/css/shared.css" rel="stylesheet" />
+    <link href="../assets/css/editorial.css" rel="stylesheet" />
+    <link href="../assets/css/about.css" rel="stylesheet" />
+    <script defer src="../assets/js/mobile-navigation.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Shared site header and primary navigation. -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a
+          aria-label="ThemeBulletin home"
+          class="site-brand"
+          href="../index.html"
+        >
+          <img
+            alt="ThemeBulletin"
+            class="site-brand__logo"
+            height="375"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </button>
+        <nav
+          aria-label="Primary navigation"
+          class="site-nav"
+          id="primary-navigation"
+        >
+          <button
+            class="menu-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >Close <span aria-hidden="true">×</span></button>
+          <a href="../index.html">Theme Boards</a>
+          <a aria-current="page" href="about.html">About</a>
+          <a href="case-study.html">Case Study</a>
+          <a href="articles.html">Journal</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="credits.html">Credits</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >GitHub</a>
+        </nav>
+        <div class="menu-backdrop" aria-hidden="true"></div>
+      </div>
+    </header>
+    <!-- Page content is authored directly in HTML; fixed boards retain their native dimensions. -->
+    <main id="main-content">
+      <header class="hero detail-heading">
+        <p class="eyebrow">About the collection</p>
+        <h1>ThemeBulletin</h1>
+        <p>
+          A curated gallery of standalone portfolio designs, each with its own live demo and GitHub repository.
+        </p>
+      </header>
+      <div class="pinboard-viewport static-board-viewport">
+        <article class="pinboard about-pinboard">
+          <div class="about-board-original-layout">
+            <a class="board-back-note" href="../index.html">← Back to Theme Boards</a>
+            <section class="about-title-note">
+              <p>About the gallery</p>
+              <h2>
+                One Collection.
+                <br />
+                Many Personalities.
+              </h2>
+            </section>
+            <section class="board-paper about-paper-one">
+              <p class="paper-kicker">The collection</p>
+              <h2>Built to Make Theme Browsing Easy</h2>
+              <p>
+                This gallery brings my standalone GitHub Pages portfolio themes into one organized place. Every theme keeps its own visual identity, live demo, source repository, and individual profile page.
+              </p>
+            </section>
+            <section class="board-paper about-paper-two">
+              <p class="paper-kicker">How to use it</p>
+              <h2>Browse, Compare, and Explore</h2>
+              <ul>
+                <li>Open a category board to compare related designs.</li>
+                <li>Select either the Polaroid or sticky note to open a theme page.</li>
+                <li>Use each profile page to launch the live demo or inspect the repository.</li>
+              </ul>
+            </section>
+            <section class="board-paper about-paper-three">
+              <p class="paper-kicker">Created by</p>
+              <h2>Alysha Pursley</h2>
+              <p>
+                I designed this collection as a professional showcase for a wide range of static portfolio concepts, from developer workspaces and retro interfaces to cosmic, colorful, and mystical themes.
+              </p>
+              <a class="paper-button" href="../index.html">Browse the Theme Boards</a>
+            </section>
+          </div>
+        </article>
+      </div>
+      <section aria-labelledby="case-study-heading" class="editorial">
+        <div class="editorial__intro">
+          <p class="eyebrow">Project case study</p>
+          <h2 id="case-study-heading">
+            ThemeBulletin: Bringing 64 Portfolio Concepts Into One Browsable Collection
+          </h2>
+          <p>
+            ThemeBulletin is a visual directory of independently published portfolio websites. The project turns a growing set of distinct designs into a single place where visitors can discover a style, inspect a preview, and move directly to the working site or its source code.
+          </p>
+        </div>
+        <article class="editorial__article">
+          <h3>The challenge: a collection needs a clear point of entry</h3>
+          <p>
+            Each portfolio theme has its own look, navigation, and personality. That variety is valuable, but separate repositories and demo URLs make it difficult to compare designs or understand the breadth of the collection. ThemeBulletin addresses that discovery problem without replacing the individual projects.
+          </p>
+          <h3>The approach: organize by visual language</h3>
+          <p>
+            The directory groups 64 themes into four browsable collections: Retro Tech &amp; Arcade, Cosmic &amp; Celestial, Colorful &amp; Creative, and Magical &amp; Spooky. The corkboard, pinned notes, and Polaroid-style previews give the gallery a recognizable identity while letting each theme's screenshot remain the focal point.
+          </p>
+          <p>
+            Visitors can filter by category, move between boards of themes, and open a dedicated profile. Each profile provides a larger preview, a short design description, and direct links to the live demo and source repository. The category names and records are maintained in one JavaScript dataset, so navigation and board contents stay in sync.
+          </p>
+          <h3>Implementation: static by design</h3>
+          <p>
+            The catalog uses semantic HTML, page-specific and shared CSS, and lightweight JavaScript for filtering, pagination, and board scaling. The site is structured for GitHub Pages and does not require an application server, database, or build pipeline. Individual theme pages remain static documents, making their content accessible through ordinary links.
+          </p>
+          <h3>The outcome</h3>
+          <p>
+            The result is a unified entry point to 64 distinct portfolio concepts, with a consistent path from discovery to preview to source code. The gallery is intentionally a directory rather than a replacement for the linked projects: each theme keeps its own identity and can be explored independently.
+          </p>
+        </article>
+      </section>
+      <section
+        aria-labelledby="articles-heading"
+        class="editorial editorial--articles"
+      >
+        <div class="editorial__intro">
+          <p class="eyebrow">Design notes</p>
+          <h2 id="articles-heading">Behind the Collection</h2>
+          <p>Two short articles on the design decisions that shape how the gallery works for visitors.</p>
+        </div>
+        <article class="editorial__article">
+          <h3>Why the Corkboard Works as Navigation</h3>
+          <p>
+            A theme gallery has to communicate variety without becoming a wall of identical cards. The corkboard borrows the familiar language of pinned ideas: a quick glance suggests exploration, comparison, and discovery. Sticky notes introduce categories and Polaroid-style images give the work itself a visual anchor.
+          </p>
+          <p>
+            The decorative approach is paired with conventional web navigation. Category controls are buttons, theme previews lead to real pages, and each detail page provides explicit links to the demo and repository. This separation matters: visual personality should support discovery, not make visitors guess what is clickable.
+          </p>
+          <p>
+            The square-board composition also introduces a responsive design tradeoff. Rather than rearranging each pinned item, the entire board scales uniformly on narrow screens. This preserves the arrangement while the surrounding page content reflows, although pinned text becomes smaller.
+          </p>
+        </article>
+        <article class="editorial__article">
+          <h3>One Directory, Many Independent Projects</h3>
+          <p>
+            ThemeBulletin treats the collection and the themes as separate products. The directory is responsible for organization, previews, and wayfinding. Each standalone portfolio is responsible for its own content, visual system, and implementation.
+          </p>
+          <p>
+            This boundary keeps the catalog maintainable. A central theme record stores the display name, category, summary, preview image, profile path, demo URL, and repository URL. The gallery reads those records to build its navigation and theme cards, while the profile pages offer a consistent place to evaluate each design before leaving the directory.
+          </p>
+          <p>
+            For visitors, the benefit is straightforward: compare several creative directions in one interface, then open the exact project that interests you. For the collection, it creates a clear structure that can grow without flattening the differences between its themes.
+          </p>
+        </article>
+      </section>
+    </main>
+    <!-- Shared site footer. -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <img
+            alt="ThemeBulletin"
+            class="site-footer__logo"
+            decoding="async"
+            height="375"
+            loading="lazy"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+          <p>A curated collection of standalone portfolio designs built for GitHub Pages.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="../index.html">Browse Themes</a>
+          <a href="../pages/about.html">About</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Alysha on GitHub</a>
+          <a href="../pages/case-study.html">Case Study</a>
+          <a href="../pages/articles.html">Journal</a>
+          <a href="../pages/privacy.html">Privacy</a>
+          <a href="../pages/terms.html">Terms</a>
+          <a href="../pages/accessibility.html">Accessibility</a>
+          <a href="../pages/credits.html">Credits</a>
+        </nav>
+        <p class="site-footer__copyright">© 2026 Alysha Pursley.</p>
+      </div>
+    </footer>
+    <script src="../assets/js/board-square.js"></script></body>
+</html>

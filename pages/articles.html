@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<!--
+  +----------------------------------------------------------------------------+
+  | ThemeBulletin                                                              |
+  | Purpose: Publishes editorial articles about the theme gallery and design   |
+  | approach.                                                                  |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- GitHub Pages cannot set custom response headers; enforce supported CSP directives in the document. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta
+      content="Read the ThemeBulletin design journal on corkboard navigation, responsive layouts, and organizing independent portfolio projects."
+      name="description"
+    />
+    <title>The Design Journal | ThemeBulletin</title>
+    <!-- Shared styles load before the page-specific editorial stylesheet. -->
+    <link href="../assets/css/shared.css" rel="stylesheet" />
+    <link href="../assets/css/editorial.css" rel="stylesheet" />
+    <script defer src="../assets/js/mobile-navigation.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Shared site header and primary navigation. -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a
+          aria-label="ThemeBulletin home"
+          class="site-brand"
+          href="../index.html"
+        >
+          <img
+            alt="ThemeBulletin"
+            class="site-brand__logo"
+            height="375"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </button>
+        <nav
+          aria-label="Primary navigation"
+          class="site-nav"
+          id="primary-navigation"
+        >
+          <button
+            class="menu-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >Close <span aria-hidden="true">×</span></button>
+          <a href="../index.html">Theme Boards</a>
+          <a href="about.html">About</a>
+          <a href="case-study.html">Case Study</a>
+          <a aria-current="page" href="articles.html">Journal</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="credits.html">Credits</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >GitHub</a>
+        </nav>
+        <div class="menu-backdrop" aria-hidden="true"></div>
+      </div>
+    </header>
+    <!-- Page content is authored directly in HTML; fixed boards retain their native dimensions. -->
+    <main id="main-content">
+      <header class="hero detail-heading">
+        <p class="eyebrow">ThemeBulletin</p>
+        <h1>The Design Journal</h1>
+        <p>Ideas and decisions behind the collection, from visual navigation to independent theme projects.</p>
+      </header>
+      <section
+        aria-labelledby="articles-heading"
+        class="editorial editorial--articles"
+      ><div class="editorial__intro">
+          <p class="eyebrow">ThemeBulletin · Design journal</p>
+          <h2 id="articles-heading">Notes from behind the boards</h2>
+          <p class="editorial__lead">A closer look at the decisions behind ThemeBulletin: how a playful visual idea becomes practical navigation, and how a single directory can give many different projects room to shine.</p>
+        </div><article class="editorial__article">
+          <p class="eyebrow">Journal 01 · Interface design</p>
+          <h3>A corkboard that does more than decorate</h3>
+          <p>There is something inviting about a bulletin board. It suggests ideas in progress, discoveries worth saving, and the freedom to explore without following a rigid sequence. That made it a natural starting point for a collection of portfolio themes with very different personalities.</p>
+          <p>But visual charm only works when people can find what they came for. In ThemeBulletin, the board is an entry point: categories guide visitors toward a particular mood, pinned theme notes lead to individual profiles, and those profiles offer clear next steps.</p>
+          <h4>Designing for recognition and clarity</h4>
+          <p>The cork texture, paper shapes, and pins give the gallery a distinctive identity. Consistent labels, links, and page structure do the quieter work of helping visitors understand where they are and what they can open. The goal is not to make navigation feel like a puzzle; it is to make browsing feel like discovery.</p>
+          <h4>The responsive compromise</h4>
+          <p>The board is composed as a square, and everything pinned to it scales together on narrower screens. That protects the arrangement and the aspect ratios of its contents. It also means the smallest text becomes smaller on phones—one reason supporting information and longer reading live in conventional, responsive page sections.</p>
+          <p><strong>The lesson:</strong> an expressive interface works best when its visual metaphor supports a familiar, predictable journey.</p>
+        </article><article class="editorial__article">
+          <p class="eyebrow">Journal 02 · Information architecture</p>
+          <h3>One gallery, 64 different identities</h3>
+          <p>A directory should make a collection easier to understand without erasing what makes each entry interesting. ThemeBulletin gathers 64 independently published portfolio designs, but it does not try to make them look or behave alike.</p>
+          <p>The shared catalog supplies the essentials: a name, category, preview, description, and routes to the profile, demo, and repository. That information creates a consistent browsing experience even though the destinations themselves may have entirely different visual systems.</p>
+          <h4>Why the profile pages matter</h4>
+          <p>A thumbnail can suggest a style, but it cannot tell the whole story. A dedicated theme page gives the visitor a larger view, context about the design direction, and a direct path to the working site or source code. It acts as a bridge between quick browsing and deeper exploration.</p>
+          <h4>Keeping the collection maintainable</h4>
+          <p>Centralizing theme records makes it easier to keep category boards and navigation aligned with the collection. Keeping each theme independently published preserves its identity and allows visitors to examine the original work rather than a simplified recreation inside the directory.</p>
+          <p><strong>The lesson:</strong> consistency belongs in the browsing experience; individuality belongs in the projects.</p>
+        </article><article class="editorial__article editorial__article--closing">
+          <p class="eyebrow">Keep exploring</p>
+          <h3>From the notes to the projects</h3>
+          <p>Interested in the decisions behind the whole site? The project case study explains the problem, design approach, implementation, and tradeoffs. Or head straight to the boards and find a theme that catches your eye.</p>
+          <div class="editorial__actions"><a href="case-study.html">Read the case study</a><a href="../index.html">Browse the themes</a></div>
+        </article></section>
+    </main>
+    <!-- Shared site footer. -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <img
+            alt="ThemeBulletin"
+            class="site-footer__logo"
+            decoding="async"
+            height="375"
+            loading="lazy"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+          <p>A curated collection of standalone portfolio designs built for GitHub Pages.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="../index.html">Browse Themes</a>
+          <a href="../pages/about.html">About</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Alysha on GitHub</a>
+          <a href="../pages/case-study.html">Case Study</a>
+          <a href="../pages/articles.html">Journal</a>
+          <a href="../pages/privacy.html">Privacy</a>
+          <a href="../pages/terms.html">Terms</a>
+          <a href="../pages/accessibility.html">Accessibility</a>
+          <a href="../pages/credits.html">Credits</a>
+        </nav>
+        <p class="site-footer__copyright">© 2026 Alysha Pursley.</p>
+      </div>
+    </footer>
+    <script src="../assets/js/board-square.js"></script></body>
+</html>

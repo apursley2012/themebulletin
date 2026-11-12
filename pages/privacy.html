@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<!--
+  +----------------------------------------------------------------------------+
+  | ThemeBulletin                                                              |
+  | Purpose: Explains what visitor information this static site does and does  |
+  | not collect.                                                               |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- GitHub Pages cannot set custom response headers; enforce supported CSP directives in the document. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta
+      content="How ThemeBulletin handles visitor information and third-party services."
+      name="description"
+    />
+    <title>Privacy Notice | ThemeBulletin</title>
+    <!-- Shared styles load before the page-specific editorial stylesheet. -->
+    <link href="../assets/css/shared.css" rel="stylesheet" />
+    <link href="../assets/css/editorial.css" rel="stylesheet" />
+    <script defer src="../assets/js/mobile-navigation.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Shared site header and primary navigation. -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a
+          aria-label="ThemeBulletin home"
+          class="site-brand"
+          href="../index.html"
+        >
+          <img
+            alt="ThemeBulletin"
+            class="site-brand__logo"
+            height="375"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </button>
+        <nav
+          aria-label="Primary navigation"
+          class="site-nav"
+          id="primary-navigation"
+        >
+          <button
+            class="menu-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >Close <span aria-hidden="true">×</span></button>
+          <a href="../index.html">Theme Boards</a>
+          <a href="about.html">About</a>
+          <a href="case-study.html">Case Study</a>
+          <a href="articles.html">Journal</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a aria-current="page" href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="credits.html">Credits</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >GitHub</a>
+        </nav>
+        <div class="menu-backdrop" aria-hidden="true"></div>
+      </div>
+    </header>
+    <!-- Page content is authored directly in HTML; fixed boards retain their native dimensions. -->
+    <main id="main-content">
+      <header class="hero detail-heading">
+        <p class="eyebrow">ThemeBulletin</p>
+        <h1>Privacy Notice</h1>
+        <p>How ThemeBulletin handles visitor information and third-party services.</p>
+      </header>
+      <section class="editorial">
+        <div class="editorial__intro">
+          <p class="eyebrow">Site information</p>
+          <h2>Privacy and third-party services</h2>
+        </div>
+        <article class="editorial__article">
+          <h3>Overview</h3>
+          <p>
+            ThemeBulletin is a publicly accessible static portfolio directory. It does not require an account, payment, or personal information to browse.
+          </p>
+          <h3>Information you provide</h3>
+          <p>
+            The website does not include a contact form, newsletter signup, or account registration. If you contact the project owner through a linked third-party service, that service handles the information you choose to provide.
+          </p>
+          <h3>Analytics, cookies, and storage</h3>
+          <p>
+            The delivered website does not implement its own analytics, advertising pixels, tracking cookies, or browser-storage profiling. Third-party services used to host the site, serve fonts, or display linked projects may process connection information under their own policies.
+          </p>
+          <h3>External services</h3>
+          <p>
+            The site loads typefaces from Google Fonts and links to GitHub and independently hosted portfolio demos. Requests to these services can disclose technical information such as an IP address and browser details to their operators. Their policies apply when you use their services.
+          </p>
+          <h3>Changes and questions</h3>
+          <p>
+            This notice describes the website source as provided in November 2026. If site integrations change, the notice should be reviewed. For questions, use the project repository link in the footer.
+          </p>
+        </article>
+      </section>
+    </main>
+    <!-- Shared site footer. -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <img
+            alt="ThemeBulletin"
+            class="site-footer__logo"
+            decoding="async"
+            height="375"
+            loading="lazy"
+            src="../assets/images/theme-bulletin-logo.png"
+            width="1355"
+          />
+          <p>A curated collection of standalone portfolio designs built for GitHub Pages.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="../index.html">Browse Themes</a>
+          <a href="../pages/about.html">About</a>
+          <a
+            href="https://github.com/apursley2012"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Alysha on GitHub</a>
+          <a href="../pages/case-study.html">Case Study</a>
+          <a href="../pages/articles.html">Journal</a>
+          <a href="../pages/privacy.html">Privacy</a>
+          <a href="../pages/terms.html">Terms</a>
+          <a href="../pages/accessibility.html">Accessibility</a>
+          <a href="../pages/credits.html">Credits</a>
+        </nav>
+        <p class="site-footer__copyright">© 2026 Alysha Pursley.</p>
+      </div>
+    </footer>
+    <script src="../assets/js/board-square.js"></script></body>
+</html>
