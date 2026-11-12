@@ -8,7 +8,7 @@ Date: August 2026
 <div align="center">
 
 
-<img src="./assets/images/themebulletin.jpg" alt="ThemeBulletin Corkboard Screenshot" width="65%">
+<img src="./assets/images/theme-bulletin-logo.png" alt="ThemeBulletin Logo" width="65%">
 
 
 <h1>Theme Bulletin 📌</h1>
