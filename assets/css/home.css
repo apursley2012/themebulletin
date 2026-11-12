@@ -1,0 +1,465 @@
+/******************************************************************************
+ * +----------------------------------------------------------------------------+
+ * | ThemeBulletin                                                              |
+ * | Purpose: Styles the home-page category notes, theme previews, and          |
+ * | bulletin-board controls.                                                   |
+ * | Author: Alysha Pursley                                                     |
+ * | Copyright (c) 2026 Alysha Pursley.                                         |
+ * +----------------------------------------------------------------------------+
+ ******************************************************************************/
+
+/*
+ * Keep a consistent visual gutter between the board area and shared footer.
+ * The spacing belongs to the home page rather than pagination because category
+ * boards intentionally hide pagination.
+ */
+#main-content {
+  padding-bottom: 4rem;
+}
+
+/* Category and pagination controls for the interactive home board. */
+.category-navigation {
+  width: min(1240px, calc(100% - 2rem));
+  margin: 1rem auto 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.category-navigation button,
+.board-pagination button {
+  padding: 0.65rem 0.9rem;
+  border: 2px solid var(--color-accent-primary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text);
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.category-navigation button[aria-pressed="true"] {
+  background: var(--color-accent-primary);
+  color: var(--color-background);
+}
+
+/*
+ * Category and theme-index sticky notes retain their fixed design dimensions.
+ * All pinned pieces scale together with the complete board.
+ */
+.note {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  padding: 1.45rem 0.95rem 0.95rem;
+  overflow: hidden;
+  background: var(--paper, var(--color-note-lime));
+  color: #120b1e;
+  box-shadow: 0 12px 26px #0008;
+  transform: rotate(var(--r));
+  border-radius: 2px 2px 10px 3px;
+  z-index: 3;
+  text-transform: uppercase;
+}
+
+.note::before {
+  content: "";
+  position: absolute;
+  top: 0.38rem;
+  left: 50%;
+  translate: -50% 0;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff9 0 18%, transparent 19%),
+    radial-gradient(
+      circle,
+      var(--tack-color, var(--color-hot-pink)) 0 60%,
+      var(--tack-shadow, var(--color-hot-pink-shadow)) 61%
+    );
+  box-shadow: 0 3px 5px #0008;
+}
+
+.note:nth-child(5n + 1) {
+  --paper: var(--color-note-lime);
+}
+
+.note:nth-child(5n + 2) {
+  --paper: #9dff8b;
+}
+
+.note:nth-child(5n + 3) {
+  --paper: var(--color-sky);
+}
+
+.note:nth-child(5n + 4) {
+  --paper: #ff9bd1;
+}
+
+.note:nth-child(5n + 5) {
+  --paper: #c8a1ff;
+}
+
+.note h2 {
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.note p {
+  font-family: "Englebert", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+}
+
+/*
+ * Category notes are the index-state controls. Their button semantics come
+ * from HTML/JavaScript; this file owns only the pinned-note presentation.
+ */
+.category-note {
+  padding: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.category-note-title {
+  display: block;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 0.45rem;
+  font-size: 1.5rem;
+}
+
+.category-note-count {
+  display: block;
+  font-family: "Englebert", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.category-note-action {
+  margin-top: 1rem;
+  padding: 0.45rem 0.65rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.category-note:hover,
+.category-note:focus-visible {
+  outline: 4px solid var(--color-accent-primary);
+  outline-offset: 4px;
+}
+
+/* Theme boards arrange sixteen fixed-size sticky notes in four rows. */
+.theme-note {
+  padding: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 0.75rem;
+  text-transform: none;
+}
+
+.theme-note small {
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.theme-note h2 {
+  font-family: "Original Surfer", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.theme-note-action {
+  padding: 0.45rem 0.65rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.theme-note:hover,
+.theme-note:focus-visible {
+  outline: 4px solid var(--color-accent-primary);
+  outline-offset: 4px;
+}
+
+/*
+ * Pagination sits outside the square corkboard so controls remain accessible
+ * while the board scales uniformly on narrow viewports.
+ */
+.board-pagination {
+  width: min(1240px, calc(100% - 2rem));
+  margin: 1.25rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.board-pagination[hidden] {
+  display: none;
+}
+
+/*
+ * The board keeps its original uniform scale. Small-screen visitors can
+ * expand a readable text list of the same current-board theme links.
+ */
+.theme-list-alternative {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .theme-list-alternative:not([hidden]) {
+    display: block;
+    width: min(100% - 2rem, 680px);
+    margin: 1rem auto;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-ink);
+    background: var(--color-paper-light);
+    color: var(--color-ink);
+  }
+
+  .theme-list-alternative summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 700;
+  }
+
+  .theme-list-alternative summary:focus-visible {
+    outline: 3px solid var(--color-hot-pink);
+    outline-offset: 3px;
+  }
+
+  .theme-list-alternative ul {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    list-style: none;
+  }
+
+  .theme-list-alternative a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem;
+    color: var(--color-ink);
+    font-family: "Englebert", cursive;
+    font-size: 1.125rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+
+  .theme-list-alternative a:focus-visible {
+    outline: 3px solid var(--color-hot-pink);
+    outline-offset: 2px;
+  }
+}
+
+.board-pagination span {
+  min-width: 250px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.board-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/*
+ * Four columns and four rows evenly spaced within the square cork surface.
+ * Each 220 × 220 note keeps its base dimensions and is scaled with the board.
+ */
+.theme-note:nth-child(4n + 1) {
+  left: 65px;
+  --r: -2deg;
+}
+.theme-note:nth-child(4n + 2) {
+  left: 352px;
+  --r: 1deg;
+}
+.theme-note:nth-child(4n + 3) {
+  left: 639px;
+  --r: -1deg;
+}
+.theme-note:nth-child(4n) {
+  left: 926px;
+  --r: 2deg;
+}
+
+.theme-note:nth-child(n + 1):nth-child(-n + 4) {
+  top: 65px;
+}
+.theme-note:nth-child(n + 5):nth-child(-n + 8) {
+  top: 352px;
+}
+.theme-note:nth-child(n + 9):nth-child(-n + 12) {
+  top: 639px;
+}
+.theme-note:nth-child(n + 13):nth-child(-n + 16) {
+  top: 926px;
+}
+
+/* Category notes share one top-aligned row with equal cork-side gaps. */
+.category-note:nth-child(1) {
+  left: 62.40px;
+  top: 66px;
+  --r: -2deg;
+}
+.category-note:nth-child(2) {
+  left: 344.80px;
+  top: 66px;
+  --r: 2deg;
+}
+.category-note:nth-child(3) {
+  left: 627.20px;
+  top: 66px;
+  --r: -2deg;
+}
+.category-note:nth-child(4) {
+  left: 909.60px;
+  top: 66px;
+  --r: 2deg;
+}
+
+/*
+ * Only navigation/pagination controls reflow at this breakpoint. Pinned items
+ * keep their designed coordinates on the fixed-size board.
+ */
+@media (max-width: 700px) {
+  .category-navigation {
+    gap: 0.5rem;
+  }
+
+  .category-navigation button,
+  .board-pagination button {
+    min-height: 44px;
+    padding: 0.6rem 0.8rem;
+    touch-action: manipulation;
+  }
+
+  .board-pagination {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+
+  .board-pagination span {
+    order: -1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .category-navigation {
+    justify-content: center;
+  }
+}
+
+/*
+ * Tack colors follow the five paper colors with contrasting accents from the
+ * site palette. The pin must remain distinct from the paper beneath it.
+ */
+.category-note:nth-child(5n + 1),
+.theme-note:nth-child(5n + 1) {
+  --tack-color: var(--color-hot-pink);
+  --tack-shadow: var(--color-hot-pink-shadow);
+}
+
+.category-note:nth-child(5n + 2),
+.theme-note:nth-child(5n + 2) {
+  --tack-color: var(--color-pin-purple);
+  --tack-shadow: var(--color-pin-purple-shadow);
+}
+
+.category-note:nth-child(5n + 3),
+.theme-note:nth-child(5n + 3) {
+  --tack-color: var(--color-hot-pink);
+  --tack-shadow: var(--color-hot-pink-shadow);
+}
+
+.category-note:nth-child(5n + 4),
+.theme-note:nth-child(5n + 4) {
+  --tack-color: var(--color-pin-cyan);
+  --tack-shadow: var(--color-pin-cyan-shadow);
+}
+
+.category-note:nth-child(5n),
+.theme-note:nth-child(5n) {
+  --tack-color: var(--color-pin-green);
+  --tack-shadow: var(--color-pin-green-shadow);
+}
+
+/* Fluid type keeps labels legible as the surrounding page narrows. */
+.category-navigation button,
+.board-pagination button {
+  font-size: clamp(0.9375rem, 0.11vw + 0.9rem, 1.0125rem);
+}
+
+/* Slightly larger desktop controls; mobile keeps the existing type scale. */
+@media (min-width: 901px) {
+  .category-navigation button,
+  .board-pagination button {
+    font-size: 1.1rem;
+  }
+}
+
+/* A readable fallback if the catalog script is unavailable or contains no entries. */
+.catalog-empty-message {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  width: min(85%, 38rem);
+  padding: 1.5rem;
+  translate: -50% 0;
+  background: var(--color-paper-light);
+  color: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  box-shadow: 5px 5px 0 var(--color-ink);
+  font-size: 1.4rem;
+  text-align: center;
+  z-index: 3;
+}
+
+/* Remove decorative lines below note links, not their actual note shadows. */
+.note,
+.note:hover,
+.note:focus-visible,
+.theme-note,
+.theme-note * {
+  text-decoration: none;
+}
+
+.note::after,
+.theme-note::after,
+.category-note::after {
+  content: none;
+}
+
